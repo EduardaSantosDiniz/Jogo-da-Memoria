@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid');
 
-const cards = [
+
+const character = [
     'beth',
     'jerry',
     'jessica',
@@ -9,10 +10,11 @@ const cards = [
     'pickle-rick',
     'rick',
     'summer',
-     'meseeks',
-     'scroopy',
+    'meeseeks',
+    'scroopy',
 
-]
+];
+
 const createElement = (tag, className) => {
     const element = document.createElement(tag);
     element.className = className;
@@ -20,10 +22,12 @@ const createElement = (tag, className) => {
 
 }
 
-const createCard = () => {
+const createCard = (character) => {
     const card = createElement('div', 'card');
     const front = createElement('div', 'face front');
     const back = createElement('div', 'face back');
+
+    front.style.backgroundimage = `url('../images/${character}.png')`;
 
 
     card.appendChild(front);
@@ -32,4 +36,20 @@ const createCard = () => {
     return card;
 
 }
+
+const loadGame = ()=> {
+
+    const duplicateCharacters = [...characters];
+
+    cards.forEach((character) => {
+
+        const card = createCard(character);
+        grid.appendChild(card);
+
+
+
+    });
+}
+
+loadGame()
 
