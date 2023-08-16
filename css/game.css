@@ -10,7 +10,7 @@
 .card{
     aspect-ratio: 3/4;
     width: 100%;
-    background-color: blueviolet;
+    background-color: #39813a;
     border-radius: 5px;
     position: relative;
     transition: all 400ms ease;
@@ -36,6 +36,7 @@
     backface-visibility: hidden;
 }
 
-.card:hover{
+
+.reveal-card {
     transform: rotateY(180deg) ;
 }
