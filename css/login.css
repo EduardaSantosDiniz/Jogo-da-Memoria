@@ -13,6 +13,10 @@
     justify-content: center;
     margin-bottom: 50px;
 }
+.logo{
+    width: 100px;
+    height: 100px;
+}
 
 .login_header img{
    width: 100px;
